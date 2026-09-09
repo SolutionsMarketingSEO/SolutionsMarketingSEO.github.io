@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Solutions Marketing VIP — SEO That Respects Your Data | Montréal</title>
+<meta name="description" content="Montreal-based SEO audits and monitoring. Clear prices, no lock-in contracts, privacy-first infrastructure. Your data stays yours.">
+<style>
+  /* Confidentialité / Privacy: aucune police externe, aucun CDN,
+     aucun traqueur. Le seul JavaScript est local — il change la
+     langue, il n'appelle nulle part. */
+  :root {
+    --gold: #B08D3E;
+    --gold-light: #D9C99A;
+    --dark: #23252B;
+    --cream: #F5F2EA;
+    --text: #3a3a40;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: Georgia, "Times New Roman", serif;
+    background: var(--cream);
+    color: var(--text);
+    line-height: 1.7;
+  }
+  .wrap { max-width: 900px; margin: 0 auto; padding: 0 24px; }
+
+  header {
+    background: var(--dark); color: #fff;
+    padding: 20px 0; border-bottom: 3px solid var(--gold);
+  }
+  header .wrap {
+    display: flex; justify-content: space-between; align-items: center;
+    flex-wrap: wrap; gap: 10px;
+  }
+  header h1 { font-size: 1.3rem; letter-spacing: 2px; }
+  header h1 span { color: var(--gold-light); }
+  header nav a, header nav button {
+    color: var(--gold-light); text-decoration: none;
+    margin-left: 14px; font-size: 0.95rem;
+    background: none; border: none; cursor: pointer;
+    font-family: inherit; padding: 0;
+  }
+  header nav a:hover, header nav button:hover { color: #fff; }
+  .lang-active { color: #fff !important; font-weight: bold; }
+
+  .hero { padding: 70px 0 60px; text-align: center; }
+  .hero h2 { font-size: 2.1rem; color: var(--dark); line-height: 1.3; margin-bottom: 16px; }
+  .hero h2 em { color: var(--gold); font-style: normal; }
+  .hero p { font-size: 1.1rem; max-width: 640px; margin: 0 auto 30px; }
+  .btn {
+    display: inline-block; background: var(--gold); color: #fff;
+    padding: 14px 34px; text-decoration: none; font-weight: bold;
+    border-radius: 3px; letter-spacing: 0.5px;
+  }
+  .btn:hover { background: #997a33; }
+
+  section { padding: 46px 0; }
+  section:nth-of-type(even) { background: #fff; }
+  h3.section-title {
+    color: var(--gold); font-size: 1.45rem; text-align: center;
+    margin-bottom: 30px; padding-bottom: 8px;
+    border-bottom: 2px solid var(--gold); display: table;
+    margin-left: auto; margin-right: auto;
+  }
+
+  .cards { display: flex; gap: 24px; flex-wrap: wrap; justify-content: center; }
+  .card {
+    flex: 1; min-width: 250px; max-width: 280px;
+    background: var(--cream); border: 1px solid #D8CFBA;
+    border-top: 4px solid var(--gold);
+    padding: 22px; border-radius: 4px;
+  }
+  .card h4 { color: var(--dark); margin-bottom: 10px; font-size: 1.05rem; }
+  .card p { font-size: 0.95rem; }
+  .card .price { color: var(--gold); font-size: 1.3rem; font-weight: bold; margin-bottom: 8px; }
+
+  ul.clean { list-style: none; max-width: 640px; margin: 0 auto; }
+  ul.clean li {
+    padding: 10px 0 10px 30px; position: relative;
+    border-bottom: 1px solid #e5dfd0;
+  }
+  ul.clean li:before {
+    content: "◆"; color: var(--gold); position: absolute;
+    left: 0; font-size: 0.8rem; top: 13px;
+  }
+
+  .privacy-box {
+    background: var(--dark); color: #ddd; padding: 30px;
+    border-radius: 4px; border-left: 5px solid var(--gold);
+    max-width: 720px; margin: 0 auto;
+  }
+  .privacy-box strong { color: var(--gold-light); }
+
+  footer {
+    background: var(--dark); color: #8a8a8a; text-align: center;
+    padding: 30px 0; font-size: 0.85rem;
+    border-top: 3px solid var(--gold);
+  }
+  footer a { color: var(--gold-light); text-decoration: none; }
+
+  /* Language switching: hide the inactive language, locally only */
+  body[data-lang="en"] [lang="fr"].block { display: none; }
+  body[data-lang="fr"] [lang="en"].block { display: none; }
+</style>
+</head>
+<body data-lang="en">
+
+<header>
+  <div class="wrap">
+    <h1>SOLUTIONS <span>MARKETING</span> VIP</h1>
+    <nav>
+      <button id="btn-en" class="lang-active" onclick="setLang('en')">EN</button>
+      <button id="btn-fr" onclick="setLang('fr')">FR</button>
+    </nav>
+  </div>
+</header>
+
+<!-- ==================== ENGLISH ==================== -->
+<div lang="en" class="block">
+  <div class="hero wrap">
+    <h2>Be found first by people already<br>searching for <em>what you offer.</em></h2>
+    <p>SEO audits and monitoring for Montreal-area businesses.
+       Clear prices, no contracts, and your data stays yours —
+       the way it should be.</p>
+    <a class="btn" href="#contact-en">Get Your Free Estimate</a>
+  </div>
+
+  <section id="services-en">
+    <div class="wrap">
+      <h3 class="section-title">What We Offer</h3>
+      <div class="cards">
+        <div class="card">
+          <div class="price">$250+</div>
+          <h4>Website Health Audit</h4>
+          <p>A full diagnostic of your site with a health score out of
+             100, ranked fixes, and plain-language instructions.
+             Yours to keep, whoever you hire.</p>
+        </div>
+        <div class="card">
+          <div class="price">Quoted</div>
+          <h4>Deep Audit</h4>
+          <p>Every page analyzed, not sampled. For larger sites that
+             want the complete picture before deciding anything.</p>
+        </div>
+        <div class="card">
+          <div class="price">$550–650/mo</div>
+          <h4>Monitoring &amp; Repair</h4>
+          <p>We fix issues, re-audit every month, and hand you a
+             one-page scorecard showing your score climb. Cancel
+             anytime — we earn the renewal.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <h3 class="section-title">Why Businesses Choose Us</h3>
+      <ul class="clean">
+        <li><strong>No contracts, no setup fees, no exit fees.</strong>
+            The market norm is 12-month lock-ins and $850+ setup fees.
+            We charge for work, not paperwork.</li>
+        <li><strong>You see the number climb.</strong> Every month,
+            the same audit, the same score, on a chart you understand.
+            Not vague promises — measured progress.</li>
+        <li><strong>We never promise #1 on Google</strong> — anyone
+            who does is selling snake oil. We remove every penalty
+            your site carries and show you the evidence.</li>
+        <li><strong>Everything we build is yours.</strong> Reports,
+            documents, accounts — you keep them all, always.
+            Leaving costs nothing.</li>
+        <li><strong>Fair middle pricing.</strong> Not the cheapest
+            bidder, not the corporate agency bill. Expert quality
+            at a price a small business can sustain.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <h3 class="section-title">Privacy Is Our Infrastructure</h3>
+      <div class="privacy-box">
+        <p>Most marketing providers run everything through advertising
+        giants — because their business model <em>is</em> advertising.
+        We run on <strong>Swiss encrypted services</strong>, our audits
+        run on <strong>our own machines</strong>, and this very website
+        loads <strong>zero trackers, zero third-party fonts, zero
+        analytics</strong> — nothing phoning home. This page practices
+        what we preach.</p>
+        <p style="margin-top:14px">Your business data should never be
+        someone else's product. With us, it never is.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <h3 class="section-title">Common Questions</h3>
+      <ul class="clean">
+        <li><strong>Why pay for an audit when others offer free ones?</strong>
+            Free audits are sales pitches in disguise, built to funnel
+            you into contracts. A paid audit owes you honesty.</li>
+        <li><strong>Do I need to rebuild my website?</strong> No. Most
+            fixes happen inside your existing admin — Shopify,
+            WordPress, or anything else you already own.</li>
+        <li><strong>What if I want to stop?</strong> You stop. No fees,
+            no hostage data. Everything produced for you was always yours.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="contact-en">
+    <div class="wrap" style="text-align:center">
+      <h3 class="section-title">Let's Talk</h3>
+      <p style="max-width:560px;margin:0 auto 24px">
+        Serving Montreal, Laval, Longueuil and the South Shore.
+        Tell us your website — we'll tell you honestly whether we
+        can help.</p>
+      <a class="btn" href="mailto:solutions.marketing.seo@proton.me">solutions.marketing.seo@proton.me</a>
+    </div>
+  </section>
+
+  <footer>
+    <div class="wrap">
+      <p>Solutions Marketing VIP — Montreal, Quebec</p>
+      <p style="margin-top:6px">
+        No trackers on this site. This page practices what it preaches.</p>
+    </div>
+  </footer>
+</div>
+
+<!-- ==================== FRANÇAIS ==================== -->
+<div lang="fr" class="block">
+  <div class="hero wrap">
+    <h2>Être trouvé premier par les gens qui<br>cherchent déjà <em>ce que vous offrez.</em></h2>
+    <p>Audits SEO et suivi pour les entreprises de la grande région de
+       Montréal. Prix clairs, sans contrat, et vos données restent les
+       vôtres — comme il se doit.</p>
+    <a class="btn" href="#contact-fr">Obtenez votre estimation gratuite</a>
+  </div>
+
+  <section>
+    <div class="wrap">
+      <h3 class="section-title">Ce que nous offrons</h3>
+      <div class="cards">
+        <div class="card">
+          <div class="price">250&nbsp;$+</div>
+          <h4>Audit de santé de site web</h4>
+          <p>Un diagnostic complet de votre site avec un score de santé
+             sur 100, des correctifs classés par priorité et des
+             consignes en langage clair. À vous de le garder, quel que
+             soit l'expert que vous engagez.</p>
+        </div>
+        <div class="card">
+          <div class="price">Sur devis</div>
+          <h4>Audit approfondi</h4>
+          <p>Chaque page analysée, pas seulement un échantillon.
+             Pour les sites plus grands qui veulent le portrait
+             complet avant de décider quoi que ce soit.</p>
+        </div>
+        <div class="card">
+          <div class="price">550–650&nbsp;$/mois</div>
+          <h4>Suivi et correction</h4>
+          <p>Nous corrigeons les problèmes, refaisons l'audit chaque
+             mois et vous remettons une page bilan montrant la
+             progression de votre score. Annulez quand vous voulez —
+             chaque renouvellement se mérite.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <h3 class="section-title">Pourquoi les entreprises nous choisissent</h3>
+      <ul class="clean">
+        <li><strong>Pas de contrat, pas de frais d'installation, pas de
+            frais de sortie.</strong> La norme du marché : des
+            engagements de 12 mois et des frais initiaux de 850&nbsp;$
+            et plus. Nous, on facture du travail, pas de la paperasse.</li>
+        <li><strong>Vous voyez le chiffre monter.</strong> Chaque mois,
+            le même audit, le même score, sur un graphique que vous
+            comprenez. Pas de promesses vagues — du progrès mesuré.</li>
+        <li><strong>On ne promet jamais la 1re place sur Google</strong> —
+            quiconque le fait vend de l'huile de serpent. Nous
+            retirons chaque pénalité que porte votre site et nous vous
+            en montrons la preuve.</li>
+        <li><strong>Tout ce qu'on construit vous appartient.</strong>
+            Rapports, documents, comptes — vous les gardez tous,
+            toujours. Partir ne coûte rien.</li>
+        <li><strong>Un juste prix du milieu.</strong> Ni le soumissionnaire
+            le moins cher, ni la facture d'agence corporative. Une
+            qualité d'expert à un prix soutenable pour une PME.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <h3 class="section-title">La confidentialité, c'est notre infrastructure</h3>
+      <div class="privacy-box">
+        <p>La plupart des fournisseurs en marketing numériquent tout
+        leur travail via les géants de la publicité — parce que leur
+        modèle d'affaires <em>est</em> la publicité. Nous, nous
+        travaillons sur des <strong>services suisses chiffrés</strong>,
+        nos audits tournent sur <strong>nos propres machines</strong>,
+        et ce site même charge <strong>zéro traqueur, zéro police
+        Google, zéro CDN, zéro analyse — rien qui appelle la maison</strong>.
+        Cette page pratique ce qu'elle prêche.</p>
+        <p style="margin-top:14px">Les données de votre entreprise ne
+        devraient jamais devenir le produit de quelqu'un d'autre.
+        Avec nous, elles ne le deviennent jamais.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <h3 class="section-title">Questions fréquentes</h3>
+      <ul class="clean">
+        <li><strong>Pourquoi payer un audit quand d'autres l'offrent
+            gratuitement&nbsp;?</strong> Les audits gratuits sont des
+            argumentaires de vente déguisés, conçus pour vous enfermer
+            dans un contrat. Un audit payé vous doit la franchise.</li>
+        <li><strong>Faut-il refaire mon site web&nbsp;?</strong> Non.
+            La plupart des correctifs se font dans votre admin
+            existant — Shopify, WordPress ou toute autre plateforme
+            que vous possédez déjà.</li>
+        <li><strong>Et si je veux arrêter&nbsp;?</strong> Vous arrêtez.
+            Aucuns frais, aucune donnée retenue en otage. Tout ce qui
+            a été produit pour vous vous a toujours appartenu.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="contact-fr">
+    <div class="wrap" style="text-align:center">
+      <h3 class="section-title">Parlons-en</h3>
+      <p style="max-width:560px;margin:0 auto 24px">
+        Au service de Montréal, Laval, Longueuil et la Rive-Sud.
+        Dites-nous votre site web — on vous dira honnêtement si on
+        peut vous aider.</p>
+      <a class="btn" href="mailto:solutions.marketing.seo@proton.me">solutions.marketing.seo@proton.me</a>
+    </div>
+  </section>
+
+  <footer>
+    <div class="wrap">
+      <p>Solutions Marketing VIP — Montréal, Québec</p>
+      <p style="margin-top:6px">
+        Aucun traqueur sur ce site. Cette page pratique ce qu'elle prêche.</p>
+    </div>
+  </footer>
+</div>
+
+<script>
+function setLang(l) {
+  document.body.dataset.lang = l;
+  document.documentElement.lang = l;
+  document.getElementById("btn-en").className = l === "en" ? "lang-active" : "";
+  document.getElementById("btn-fr").className = l === "fr" ? "lang-active" : "";
+  try { localStorage.setItem("preflang", l); } catch (e) {}
+}
+try {
+  var saved = localStorage.getItem("preflang");
+  if (saved === "fr" || saved === "en") setLang(saved);
+} catch (e) {}
+</script>
+
+</body>
+</html>

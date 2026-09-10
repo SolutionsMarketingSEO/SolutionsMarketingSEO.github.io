@@ -10,8 +10,8 @@
 <meta name="description" content="Montreal-based SEO audits and monitoring. Clear prices, no lock-in contracts, privacy-first infrastructure. Your data stays yours.">
 <style>
   /* Confidentialité / Privacy: aucune police externe, aucun CDN,
-     aucun traqueur. Le seul JavaScript est local. Il change la
-     langue et anime la page, il n'appelle nulle part. */
+     aucun traqueur. Le JavaScript est 100% local : langue,
+     animations, compteurs. Il n'appelle nulle part. */
   :root {
     --gold: #B08D3E;
     --gold-light: #D9C99A;
@@ -32,6 +32,12 @@
   header {
     background: var(--dark); color: #fff;
     padding: 20px 0; border-bottom: 3px solid var(--gold);
+    position: sticky; top: 0; z-index: 50;
+    transition: padding 0.3s ease, box-shadow 0.3s ease;
+  }
+  header.condensed {
+    padding: 10px 0;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.45);
   }
   header .wrap {
     display: flex; justify-content: space-between; align-items: center;
@@ -71,9 +77,16 @@
   h3.section-title {
     color: var(--gold); font-size: 1.45rem; text-align: center;
     margin-bottom: 30px; padding-bottom: 8px;
-    border-bottom: 2px solid var(--gold); display: table;
-    margin-left: auto; margin-right: auto;
+    display: table; margin-left: auto; margin-right: auto;
+    position: relative;
   }
+  /* Underline that draws itself / soulignement qui se dessine */
+  h3.section-title::after {
+    content: ""; position: absolute; left: 0; bottom: 0;
+    height: 2px; background: var(--gold);
+    width: 0; transition: width 0.8s ease 0.15s;
+  }
+  .visible h3.section-title::after { width: 100%; }
 
   .cards { display: flex; gap: 24px; flex-wrap: wrap; justify-content: center; }
   .card {
@@ -90,6 +103,24 @@
   .card h4 { color: var(--dark); margin-bottom: 10px; font-size: 1.05rem; }
   .card p { font-size: 0.95rem; }
   .card .price { color: var(--gold); font-size: 1.3rem; font-weight: bold; margin-bottom: 8px; }
+
+  /* Staggered card fade / apparition en cascade */
+  .visible .cards .card { animation: cardFade 0.6s ease both; }
+  .visible .cards .card:nth-child(2) { animation-delay: 0.15s; }
+  .visible .cards .card:nth-child(3) { animation-delay: 0.3s; }
+  @keyframes cardFade { from { opacity: 0; } to { opacity: 1; } }
+
+  /* Stats band / bandeau de chiffres */
+  .stats-band { background: var(--dark); text-align: center; padding: 40px 0; }
+  .stats-band .wrap {
+    display: flex; justify-content: center; flex-wrap: wrap; gap: 34px;
+  }
+  .stat { min-width: 130px; }
+  .stat-num {
+    font-size: 2.3rem; font-weight: bold; color: var(--gold-light);
+    line-height: 1.2;
+  }
+  .stat-label { color: #aaa; font-size: 0.85rem; letter-spacing: 0.4px; }
 
   ul.clean { list-style: none; max-width: 640px; margin: 0 auto; }
   ul.clean li {
@@ -123,6 +154,8 @@
     from { opacity: 0; transform: translateY(24px); }
     to   { opacity: 1; transform: translateY(0); }
   }
+  .hero .wrap { animation: fadeInUp 0.9s ease both; }
+
   .reveal {
     opacity: 0;
     transform: translateY(24px);
@@ -132,18 +165,25 @@
     opacity: 1;
     transform: translateY(0);
   }
-  .hero .wrap {
-    animation: fadeInUp 0.9s ease both;
+
+  /* Gentle fade when switching language / fondu au changement de langue */
+  @keyframes langFade {
+    from { opacity: 0; }
+    to   { opacity: 1; }
   }
+  body.langswap .block { animation: langFade 0.35s ease; }
+
   @media (prefers-reduced-motion: reduce) {
     .reveal, .hero .wrap { transition: none; animation: none; opacity: 1; transform: none; }
+    .visible .cards .card { animation: none; }
+    h3.section-title::after { transition: none; width: 100%; }
     html { scroll-behavior: auto; }
   }
 </style>
 </head>
 <body data-lang="en">
 
-<header>
+<header id="site-header">
   <div class="wrap">
     <h1>SOLUTIONS <span>MARKETING</span> VIP</h1>
     <nav>
@@ -157,11 +197,32 @@
 <!-- ==================== ENGLISH ==================== -->
 <div lang="en" class="block">
   <div class="hero wrap">
-    <h2>Be found first by people already<br>searching for <em>what you offer.</em></h2>
+    <h2 id="hero-title-en">Be found first by people already<br>searching for <em>what you offer.</em></h2>
     <p>SEO audits and monitoring for Montreal-area businesses.
        Clear prices, no contracts, and your data stays yours.
        The way it should be.</p>
     <a class="btn" href="#contact-en">Get Your Free Estimate</a>
+  </div>
+
+  <div class="stats-band">
+    <div class="wrap">
+      <div class="stat">
+        <div class="stat-num"><span class="stat-prefix">$</span><span class="stat-count" data-target="850">0</span></div>
+        <div class="stat-label">Setup fees elsewhere</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num"><span class="stat-count" data-target="12">0</span></div>
+        <div class="stat-label">Months of contract elsewhere</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num"><span class="stat-count" data-target="100">0</span><span class="stat-suffix">/100</span></div>
+        <div class="stat-label">Health score we measure</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num">0</div>
+        <div class="stat-label">Trackers on this page</div>
+      </div>
+    </div>
   </div>
 
   <section id="services-en">
@@ -284,11 +345,32 @@
 <!-- ==================== FRANÇAIS ==================== -->
 <div lang="fr" class="block">
   <div class="hero wrap">
-    <h2>Être trouvé premier par les gens qui<br>cherchent déjà <em>ce que vous offrez.</em></h2>
+    <h2 id="hero-title-fr">Être trouvé premier par les gens qui<br>cherchent déjà <em>ce que vous offrez.</em></h2>
     <p>Audits SEO et suivi pour les entreprises de la grande région de
        Montréal. Prix clairs, sans contrat, et vos données restent les
        vôtres. Comme il se doit.</p>
     <a class="btn" href="#contact-fr">Obtenez votre estimation gratuite</a>
+  </div>
+
+  <div class="stats-band">
+    <div class="wrap">
+      <div class="stat">
+        <div class="stat-num"><span class="stat-prefix">$</span><span class="stat-count" data-target="850">0</span></div>
+        <div class="stat-label">Frais d'installation ailleurs</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num"><span class="stat-count" data-target="12">0</span></div>
+        <div class="stat-label">Mois de contrat ailleurs</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num"><span class="stat-count" data-target="100">0</span><span class="stat-suffix">/100</span></div>
+        <div class="stat-label">Score de santé mesuré</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num">0</div>
+        <div class="stat-label">Traceurs sur cette page</div>
+      </div>
+    </div>
   </div>
 
   <section>
@@ -426,26 +508,72 @@ function setLang(l) {
   document.getElementById("btn-en").className = l === "en" ? "lang-active" : "";
   document.getElementById("btn-fr").className = l === "fr" ? "lang-active" : "";
   try { localStorage.setItem("preflang", l); } catch (e) {}
+  /* Gentle fade on switch / fondu doux au changement */
+  document.body.classList.remove("langswap");
+  void document.body.offsetWidth;
+  document.body.classList.add("langswap");
 }
-try {
-  var saved = localStorage.getItem("preflang");
-  if (saved === "fr" || saved === "en") setLang(saved);
-} catch (e) {}
 
-/* Animation locale : révèle les sections au défilement.
-   Local animation: reveals sections on scroll. N'appelle rien
-   d'externe. */
-(function () {
-  var targets = document.querySelectorAll("section");
-  for (var i = 0; i < targets.length; i++) {
-    targets[i].classList.add("reveal");
+/* ===== Typewriter: the gold phrase types itself once ===== */
+function typeHeroPhrase() {
+  var lang = document.body.dataset.lang || "en";
+  var h2 = document.getElementById(lang === "fr" ? "hero-title-fr" : "hero-title-en");
+  if (!h2) return;
+  var em = h2.querySelector("em");
+  if (!em) return;
+  var text = em.textContent;
+  em.textContent = "";
+  var i = 0;
+  var timer = setInterval(function () {
+    em.textContent += text.charAt(i);
+    i++;
+    if (i >= text.length) clearInterval(timer);
+  }, 45);
+}
+
+/* ===== Counters: numbers climb into view ===== */
+function animateCounters() {
+  var nums = document.querySelectorAll(".stat-count");
+  for (var i = 0; i < nums.length; i++) {
+    (function (el) {
+      var target = parseInt(el.getAttribute("data-target"), 10) || 0;
+      var start = null;
+      var dur = 1200;
+      function step(ts) {
+        if (!start) start = ts;
+        var p = Math.min((ts - start) / dur, 1);
+        el.textContent = Math.round(target * p);
+        if (p < 1) requestAnimationFrame(step);
+      }
+      requestAnimationFrame(step);
+    })(nums[i]);
   }
-  if (!("IntersectionObserver" in window)) {
-    for (var j = 0; j < targets.length; j++) {
-      targets[j].classList.add("visible");
-    }
+}
+
+/* ===== Local animations: nothing external is called ===== */
+(function () {
+  var reduced = false;
+  try {
+    reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  } catch (e) {}
+
+  /* Condensing header on scroll */
+  var header = document.getElementById("site-header");
+  window.addEventListener("scroll", function () {
+    if (window.scrollY > 40) header.classList.add("condensed");
+    else header.classList.remove("condensed");
+  }, { passive: true });
+
+  /* Section reveals */
+  var targets = document.querySelectorAll("section");
+  for (var i = 0; i < targets.length; i++) targets[i].classList.add("reveal");
+
+  if (!("IntersectionObserver" in window) || reduced) {
+    for (var j = 0; j < targets.length; j++) targets[j].classList.add("visible");
     return;
   }
+
+  var countersDone = false;
   var obs = new IntersectionObserver(function (entries) {
     for (var k = 0; k < entries.length; k++) {
       if (entries[k].isIntersecting) {
@@ -454,8 +582,31 @@ try {
       }
     }
   }, { threshold: 0.12 });
-  for (var m = 0; m < targets.length; m++) {
-    obs.observe(targets[m]);
+  for (var m = 0; m < targets.length; m++) obs.observe(targets[m]);
+
+  /* Stats band triggers the counters (visible language's band) */
+  var bands = document.querySelectorAll(".stats-band");
+  var obs2 = new IntersectionObserver(function (entries) {
+    for (var k = 0; k < entries.length; k++) {
+      if (entries[k].isIntersecting && !countersDone) {
+        countersDone = true;
+        if (reduced) {
+          var nums = document.querySelectorAll(".stat-count");
+          for (var n = 0; n < nums.length; n++) {
+            nums[n].textContent = nums[n].getAttribute("data-target");
+          }
+        } else {
+          animateCounters();
+        }
+        obs2.disconnect();
+      }
+    }
+  }, { threshold: 0.4 });
+  for (var b = 0; b < bands.length; b++) obs2.observe(bands[b]);
+
+  /* Typewriter starts after the hero fade-in */
+  if (!reduced) {
+    setTimeout(typeHeroPhrase, 700);
   }
 })();
 </script>

@@ -29,6 +29,13 @@
   }
   .wrap { max-width: 900px; margin: 0 auto; padding: 0 24px; }
 
+  /* ===== Scroll progress bar / barre de progression ===== */
+  #progress-bar {
+    position: fixed; top: 0; left: 0; z-index: 100;
+    height: 3px; width: 0%;
+    background: var(--gold);
+  }
+
   header {
     background: var(--dark); color: #fff;
     padding: 20px 0; border-bottom: 3px solid var(--gold);
@@ -63,6 +70,7 @@
     display: inline-block; background: var(--gold); color: #fff;
     padding: 14px 34px; text-decoration: none; font-weight: bold;
     border-radius: 3px; letter-spacing: 0.5px; margin: 6px;
+    position: relative; overflow: hidden;
     transition: background 0.25s ease, transform 0.2s ease,
                 box-shadow 0.2s ease;
   }
@@ -71,6 +79,20 @@
     transform: translateY(-2px);
     box-shadow: 0 6px 16px rgba(0,0,0,0.15);
   }
+  /* ===== Gold shimmer sweep / reflet doré ===== */
+  .btn::before {
+    content: ""; position: absolute; top: 0; left: -80%;
+    width: 50%; height: 100%;
+    background: linear-gradient(115deg, transparent,
+               rgba(255,255,255,0.35), transparent);
+    transform: skewX(-20deg);
+    transition: left 0.6s ease;
+  }
+  .btn:hover::before { left: 130%; }
+
+  /* ===== Magnetic hero button / bouton magnétique ===== */
+  .btn-magnetic { transition: transform 0.15s ease-out, background 0.25s ease; }
+  .btn-magnetic:hover { transform: none; }
 
   section { padding: 46px 0; }
   section:nth-of-type(even) { background: #fff; }
@@ -80,7 +102,6 @@
     display: table; margin-left: auto; margin-right: auto;
     position: relative;
   }
-  /* Underline that draws itself / soulignement qui se dessine */
   h3.section-title::after {
     content: ""; position: absolute; left: 0; bottom: 0;
     height: 2px; background: var(--gold);
@@ -104,13 +125,11 @@
   .card p { font-size: 0.95rem; }
   .card .price { color: var(--gold); font-size: 1.3rem; font-weight: bold; margin-bottom: 8px; }
 
-  /* Staggered card fade / apparition en cascade */
   .visible .cards .card { animation: cardFade 0.6s ease both; }
   .visible .cards .card:nth-child(2) { animation-delay: 0.15s; }
   .visible .cards .card:nth-child(3) { animation-delay: 0.3s; }
   @keyframes cardFade { from { opacity: 0; } to { opacity: 1; } }
 
-  /* Stats band / bandeau de chiffres */
   .stats-band { background: var(--dark); text-align: center; padding: 40px 0; }
   .stats-band .wrap {
     display: flex; justify-content: center; flex-wrap: wrap; gap: 34px;
@@ -149,7 +168,6 @@
   body[data-lang="en"] [lang="fr"].block { display: none; }
   body[data-lang="fr"] [lang="en"].block { display: none; }
 
-  /* ===== Animations locales / Local animations ===== */
   @keyframes fadeInUp {
     from { opacity: 0; transform: translateY(24px); }
     to   { opacity: 1; transform: translateY(0); }
@@ -166,7 +184,6 @@
     transform: translateY(0);
   }
 
-  /* Gentle fade when switching language / fondu au changement de langue */
   @keyframes langFade {
     from { opacity: 0; }
     to   { opacity: 1; }
@@ -177,11 +194,14 @@
     .reveal, .hero .wrap { transition: none; animation: none; opacity: 1; transform: none; }
     .visible .cards .card { animation: none; }
     h3.section-title::after { transition: none; width: 100%; }
+    .btn::before { display: none; }
     html { scroll-behavior: auto; }
   }
 </style>
 </head>
 <body data-lang="en">
+
+<div id="progress-bar"></div>
 
 <header id="site-header">
   <div class="wrap">
@@ -201,7 +221,7 @@
     <p>SEO audits and monitoring for Montreal-area businesses.
        Clear prices, no contracts, and your data stays yours.
        The way it should be.</p>
-    <a class="btn" href="#contact-en">Get Your Free Estimate</a>
+    <a class="btn btn-magnetic" href="#contact-en">Get Your Free Estimate</a>
   </div>
 
   <div class="stats-band">
@@ -329,7 +349,7 @@
         Serving Montreal, Laval, Longueuil and the South Shore.
         Tell us your website. We'll tell you honestly whether we
         can help.</p>
-      <a class="btn" href="mailto:solutions.marketing.vip@proton.me">solutions.marketing.vip@proton.me</a>
+      <a class="btn btn-magnetic" href="mailto:solutions.marketing.vip@proton.me">solutions.marketing.vip@proton.me</a>
     </div>
   </section>
 
@@ -349,7 +369,7 @@
     <p>Audits SEO et suivi pour les entreprises de la grande région de
        Montréal. Prix clairs, sans contrat, et vos données restent les
        vôtres. Comme il se doit.</p>
-    <a class="btn" href="#contact-fr">Obtenez votre estimation gratuite</a>
+    <a class="btn btn-magnetic" href="#contact-fr">Obtenez votre estimation gratuite</a>
   </div>
 
   <div class="stats-band">
@@ -488,7 +508,7 @@
         Au service de Montréal, Laval, Longueuil et la Rive-Sud.
         Dites-nous votre site web. On vous dira honnêtement si on
         peut vous aider.</p>
-      <a class="btn" href="mailto:solutions.marketing.vip@proton.me">solutions.marketing.vip@proton.me</a>
+      <a class="btn btn-magnetic" href="mailto:solutions.marketing.vip@proton.me">solutions.marketing.vip@proton.me</a>
     </div>
   </section>
 
@@ -508,7 +528,6 @@ function setLang(l) {
   document.getElementById("btn-en").className = l === "en" ? "lang-active" : "";
   document.getElementById("btn-fr").className = l === "fr" ? "lang-active" : "";
   try { localStorage.setItem("preflang", l); } catch (e) {}
-  /* Gentle fade on switch / fondu doux au changement */
   document.body.classList.remove("langswap");
   void document.body.offsetWidth;
   document.body.classList.add("langswap");
@@ -556,6 +575,20 @@ function animateCounters() {
   try {
     reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   } catch (e) {}
+  var finePointer = false;
+  try {
+    finePointer = window.matchMedia("(hover: hover) and (pointer: fine)").matches;
+  } catch (e) {}
+
+  /* Scroll progress bar */
+  var bar = document.getElementById("progress-bar");
+  function updateBar() {
+    var h = document.documentElement.scrollHeight - window.innerHeight;
+    var p = h > 0 ? (window.scrollY / h) * 100 : 0;
+    bar.style.width = p + "%";
+  }
+  window.addEventListener("scroll", updateBar, { passive: true });
+  updateBar();
 
   /* Condensing header on scroll */
   var header = document.getElementById("site-header");
@@ -563,6 +596,24 @@ function animateCounters() {
     if (window.scrollY > 40) header.classList.add("condensed");
     else header.classList.remove("condensed");
   }, { passive: true });
+
+  /* Magnetic hero buttons (desktop pointer only) */
+  if (finePointer && !reduced) {
+    var mags = document.querySelectorAll(".btn-magnetic");
+    for (var mi = 0; mi < mags.length; mi++) {
+      (function (btn) {
+        btn.addEventListener("pointermove", function (e) {
+          var r = btn.getBoundingClientRect();
+          var dx = ((e.clientX - r.left) / r.width - 0.5) * 12;
+          var dy = ((e.clientY - r.top) / r.height - 0.5) * 8;
+          btn.style.transform = "translate(" + dx + "px," + dy + "px)";
+        });
+        btn.addEventListener("pointerleave", function () {
+          btn.style.transform = "";
+        });
+      })(mags[mi]);
+    }
+  }
 
   /* Section reveals */
   var targets = document.querySelectorAll("section");
@@ -573,7 +624,6 @@ function animateCounters() {
     return;
   }
 
-  var countersDone = false;
   var obs = new IntersectionObserver(function (entries) {
     for (var k = 0; k < entries.length; k++) {
       if (entries[k].isIntersecting) {
@@ -584,7 +634,7 @@ function animateCounters() {
   }, { threshold: 0.12 });
   for (var m = 0; m < targets.length; m++) obs.observe(targets[m]);
 
-  /* Stats band triggers the counters (visible language's band) */
+  var countersDone = false;
   var bands = document.querySelectorAll(".stats-band");
   var obs2 = new IntersectionObserver(function (entries) {
     for (var k = 0; k < entries.length; k++) {
@@ -604,7 +654,6 @@ function animateCounters() {
   }, { threshold: 0.4 });
   for (var b = 0; b < bands.length; b++) obs2.observe(bands[b]);
 
-  /* Typewriter starts after the hero fade-in */
   if (!reduced) {
     setTimeout(typeHeroPhrase, 700);
   }

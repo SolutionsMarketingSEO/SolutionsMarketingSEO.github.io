@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Your Phone Isn't Taking Secret Selfies. The Truth Is Scarier. | VIP Marketing Solutions</title>
+<meta name="description" content="The viral iPhone infrared rumor debunked, plus the documented privacy leaks on iPhone and Android, and how GrapheneOS, pfSense and Quad9 actually protect your business.">
+<style>
+  :root {
+    --gold: #B08D3E;
+    --gold-light: #D9C99A;
+    --dark: #23252B;
+    --cream: #F5F2EA;
+    --text: #3a3a40;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: Georgia, "Times New Roman", serif;
+    background: var(--cream); color: var(--text); line-height: 1.75;
+  }
+
+  #progress-bar {
+    position: fixed; top: 0; left: 0; z-index: 100;
+    height: 3px; width: 0%;
+    background: var(--gold);
+  }
+
+  header {
+    background: var(--dark); color: #fff;
+    padding: 20px 0; border-bottom: 3px solid var(--gold);
+    position: sticky; top: 0; z-index: 50;
+    transition: padding 0.3s ease, box-shadow 0.3s ease;
+  }
+  header.condensed {
+    padding: 10px 0;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.45);
+  }
+  header .hwrap {
+    max-width: 900px; margin: 0 auto; padding: 0 24px;
+    display: flex; justify-content: space-between; align-items: center;
+    flex-wrap: wrap; gap: 10px;
+  }
+  header h1 { font-size: 1.2rem; letter-spacing: 2px; }
+  header h1 span { color: var(--gold-light); }
+  header nav a, header nav button {
+    color: var(--gold-light); text-decoration: none;
+    margin-left: 14px; font-size: 0.95rem;
+    background: none; border: none; cursor: pointer;
+    font-family: inherit; padding: 0;
+    transition: color 0.25s ease;
+  }
+  header nav a:hover, header nav button:hover { color: #fff; }
+
+  article {
+    max-width: 720px; margin: 36px auto; padding: 34px 26px;
+    background: #fff; border: 1px solid #D8CFBA;
+    border-top: 4px solid var(--gold); border-radius: 4px;
+  }
+  h2 { font-size: 1.65em; color: var(--dark); margin-top: 36px; line-height: 1.3; }
+  h3 { color: var(--dark); margin-top: 28px; }
+  .post-meta { color: #999; font-style: italic; font-size: 0.9em; }
+  p { margin: 14px 0; }
+  ul { margin: 14px 0 14px 22px; }
+  li { margin: 6px 0; }
+
+  .tip-box {
+    background: var(--cream); border-left: 4px solid var(--gold);
+    padding: 15px 18px; margin: 22px 0; border-radius: 0 4px 4px 0;
+  }
+  .warn-box {
+    background: #fbe9e7; border-left: 4px solid #c62828;
+    padding: 15px 18px; margin: 22px 0; border-radius: 0 4px 4px 0;
+  }
+  .fact-box {
+    background: #eef3ee; border-left: 4px solid #4a7c59;
+    padding: 15px 18px; margin: 22px 0; border-radius: 0 4px 4px 0;
+  }
+  .cta {
+    background: var(--dark); color: var(--gold-light);
+    padding: 26px; margin: 40px 0 10px; text-align: center;
+    border-radius: 4px;
+  }
+  .cta a { color: #fff; }
+
+  .article-img {
+    display: block; width: 100%; max-width: 420px; max-height: 160px;
+    object-fit: cover; border-radius: 4px;
+    border-bottom: 3px solid var(--gold);
+    margin: 0 auto 18px;
+  }
+
+  footer {
+    background: var(--dark); color: #8a8a8a; text-align: center;
+    padding: 30px 20px; font-size: 0.85rem;
+    border-top: 3px solid var(--gold);
+    font-family: Arial, sans-serif;
+  }
+
+  .fr { display: none; }
+  body.lang-fr .en { display: none; }
+  body.lang-fr .fr { display: block; }
+
+  @keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+  article { animation: fadeInUp 0.7s ease both; }
+
+  @media (prefers-reduced-motion: reduce) {
+    article { animation: none; }
+    html { scroll-behavior: auto; }
+  }
+</style>
+</head>
+<body class="lang-en">
+
+<div id="progress-bar"></div>
+
+<header id="site-header">
+  <div class="hwrap">
+    <h1>SOLUTIONS <span>MARKETING</span> VIP</h1>
+    <nav>
+      <a href="index.html"><span class="en">Home</span><span class="fr">Accueil</span></a>
+      <a href="blog-list.html"><span class="en">Articles</span><span class="fr">Articles</span></a>
+      <button class="toggle-btn" onclick="toggleLang()" id="langBtn" style="background:#B08D3E;color:#fff;border:none;padding:8px 18px;cursor:pointer;font-weight:bold;border-radius:3px;font-family:Georgia,serif;">FR</button>
+    </nav>
+  </div>
+</header>
+
+<article>
+
+<img src="blog5-hero.png" alt="Gold smartphone with infrared sensors connected to a locked router" class="article-img">
+
+<span class="en">
+<h2>Your Phone Isn't Taking Secret Selfies. The Truth Is Scarier.</h2>
+<p class="post-meta">Published September 2026 - VIP Marketing Solutions</p>
+
+<p>A viral video shows an iPhone in a dark room, filmed through another camera: the front of the phone flashes light, over and over, every second. The caption writes itself: "It's taking selfies of you constantly. It's watching you." Millions of views. Panic in the comments.</p>
+
+<p>Here is our job: sort the myth from the reality. Because the myth is false, but the documented reality around your phone is worse than a selfie scare, and nobody is making viral videos about it.</p>
+
+<h3>The infrared flash: what is actually happening</h3>
+
+<p>That flickering light is the <strong>infrared flood illuminator</strong>, part of the Face ID hardware on the front of the phone. It projects invisible infrared light to measure distance and detect whether you are present and looking at the screen. That is how the screen dims when you look away and expands a notification when you glance at it.</p>
+
+<div class="fact-box">
+<p><strong>The verdict:</strong> no photo is taken, and nothing is sent anywhere. It is a presence check, not a camera shutter. Your other camera can see the infrared bursts; your eye cannot. Also, the sensor people blame is not LiDAR. LiDAR lives on the back of Pro-model iPhones for measuring rooms and objects. One more correction: this behavior is not "every phone." This is Face ID hardware. Many Android phones do not have it at all.</p>
+</div>
+
+<h3>So the iPhone is innocent? Not exactly.</h3>
+
+<p>The rumor is false. But the documented record on Apple's privacy is genuinely rough, and most iPhone owners have never heard these stories.</p>
+
+<h3>1. Siri contractors listened to private moments (2019)</h3>
+<p>Apple confirmed that a small portion of Siri recordings, including accidental activations picking up private conversations, confidential medical information, and other sensitive moments, were reviewed by human contractors and even shared with third parties. Apple apologized and changed the program. But the record is public.</p>
+
+<h3>2. The plan to scan your photo library (2021-2023)</h3>
+<p>Apple announced a system that would scan photos on your own device before they synced to iCloud, looking for flagged material. Cryptographers and security experts warned it created a surveillance mechanism that could be repurposed by governments. After three years of backlash, Apple abandoned the plan, admitting that scanning every user's privately stored data would create new threat vectors. Read that twice: the company itself concluded mass scanning of private data is dangerous.</p>
+
+<h3>3. iCloud is not what you think it is</h3>
+<p>Your iPhone is extremely well encrypted; Apple famously cannot unlock it, even for law enforcement. But standard iCloud backups are a different animal: their contents can be accessible to Apple and have been handed over in criminal investigations. Many people believe their "cloud" inherits the phone's protection. By default, it does not. End-to-end encrypted backups exist, but you have to switch them on deliberately.</p>
+
+<h3>4. The quiet heartbeat</h3>
+<p>A peer-reviewed study from Trinity College Dublin (Professor Douglas Leith) found that an idle, fully opted-out iPhone contacts Apple roughly every 4.5 minutes, sharing identifiers such as the hardware serial number. The same study found Apple can log which handsets are nearby via Bluetooth. Opting out did not stop it.</p>
+
+<h3>Now the Android side of the ledger</h3>
+
+<p>The same Trinity College study measured both ecosystems, and here Android comes out worse on volume: an idle Pixel sent Google roughly <strong>1 MB every 12 hours, about 20 times more than the iPhone's 52 KB</strong>, including the IMEI, phone number, SIM serial number, and more, even from devices where the user had never logged in to a Google account.</p>
+
+<p>Stock Android also ties deep into Google services: location history, ad profiling, Play Services running with privileged access at the heart of the system. On a standard Android phone, Google's reach is simply broader. That is the honest picture.</p>
+
+<div class="tip-box">
+<p><strong>The scoreboard, honestly:</strong> iPhone: less data leaked, but a track record of overreach attempts and a cloudy iCloud by default. Android: more telemetry by far, but more freedom to replace the system. Neither is "private." Both phone home. The difference is what you can do about it, which brings us to the only phone we can actually recommend without crossing our fingers.</p>
+</div>
+
+<h3>GrapheneOS: what a private phone actually looks like</h3>
+
+<p>We run our own business communication on GrapheneOS, and we will tell you plainly what it is: a hardened, open-source operating system for Google Pixel phones, with no Google inside unless you invite it.</p>
+
+<ul>
+<li><strong>No Google by default.</strong> The system ships with zero Google apps and services. Nothing checks in with Mountain View unless you choose to.</li>
+<li><strong>Sandboxed Google Play, if you want it.</strong> Need a banking app? You can install Play Services as an ordinary, unprivileged app: same as any other app, no special powers, fully removable. This is the feature that makes daily life possible.</li>
+<li><strong>User profiles as walls.</strong> You can create separate profiles: one for work, one for family, one locked down for travel. Each profile has its own encryption keys, its own apps, its own data. Apps in one profile cannot see or talk to apps in another. Stock Android allows about 4 profiles; GrapheneOS allows up to 32.</li>
+<li><strong>Real controls.</strong> Per-network permissions, sensors that can be switched off globally with a toggle, and a VPN configuration per profile.</li>
+<li><strong>Regular security updates</strong>, typically faster than stock Android delivers them.</li>
+</ul>
+
+<p>For a small business owner, the pitch is simple: your client conversations, contracts, and account logins live in a walled-off workspace on a phone that does not answer to an advertising company. If a client's data is on your phone, it is defended by design, not by a settings checkbox.</p>
+
+<h3>Beyond the phone: the box nobody checks, your router</h3>
+
+<p>Here is the part most people never think about. Every device in your home or office pours its traffic through one box: your router. And the router that your internet provider gave you is often the least patched, most neglected computer in the building. Journalist Naomi Brockwell (NBTV) has covered this in depth, including an interview with the founder of Protectli, a company that builds small dedicated firewall appliances.</p>
+
+<p>The idea: replace or bypass the provider box with an open-source firewall system like <strong>pfSense</strong> on a small dedicated appliance. You get full control over what enters and leaves your network, per-device rules, VPN for the whole building, and visibility into what your devices are actually talking to. It is the difference between trusting every gadget in your office and having a gatekeeper that answers to you.</p>
+
+<div class="warn-box">
+<p><strong>A word of honesty:</strong> a pfSense box is a weekend project, not a magic purchase. It suits a home office or a small business that wants real control. If that is not you yet, there is still one upgrade you can do tonight, in five minutes, for free. It is called DNS.</p>
+</div>
+
+<h3>DNS: the phone book your provider reads over your shoulder</h3>
+
+<p>Every website visit starts with a lookup: your device asks a DNS resolver to translate a name into an address. By default, that question goes to your internet provider, or to whoever controls your router. That means a list of nearly every site you visit is being watched, logged, or resold, even on sites that use encryption. And a badly configured setup can spring DNS leaks, where your requests escape through channels you never chose, revealing your browsing despite your VPN.</p>
+
+<p>The fix takes minutes. Switch your DNS to a provider that does not log and does not sell:</p>
+
+<ul>
+<li><strong>Quad9 (9.9.9.9)</strong>: a Swiss nonprofit foundation. It does not store IP addresses linked to your lookups, and it automatically blocks known malware and phishing domains, per independent evaluations it blocks the vast majority of them. Free, funded by sponsors, no ads, no data sales. That is what we use.</li>
+<li><strong>Cloudflare (1.1.1.1)</strong>: commits in writing not to sell browsing data and purge logs within 24 hours.</li>
+<li><strong>NextDNS</strong>: highly configurable, with detailed logs only if you choose to keep them.</li>
+</ul>
+
+<p>You can change DNS in your router settings once and protect every device in the building, or per-device for phones and laptops on the move. Combine a privacy DNS with your existing devices, and you have removed the widest-open window in your digital life.</p>
+
+<h3>Your action list, tonight</h3>
+
+<ul>
+<li>Stop fearing the infrared blink: it is a presence sensor, not a paparazzi</li>
+<li>If you use iCloud or Google backups, review what is actually protected end to end, and turn on what is</li>
+<li>Change your DNS to Quad9 or Cloudflare, ideally on the router so everything behind it benefits</li>
+<li>Update your router's firmware, change its admin password from the default</li>
+<li>If you are serious: consider GrapheneOS on your next phone, and a pfSense appliance for the office</li>
+</ul>
+
+<div class="cta">
+<p><strong>Practice, not panic</strong></p>
+<p>We run our entire business on privacy-first infrastructure, and we help our clients do the same. Your data stays yours. <a href="index.html">Learn how we work &#8594;</a></p>
+</div>
+</span>
+
+<span class="fr">
+<h2>Votre téléphone ne prend pas de selfies secrets. La vérité est pire.</h2>
+<p class="post-meta">Publié en septembre 2026 - Solutions Marketing VIP</p>
+
+<p>Une vidéo virale montre un iPhone dans une pièce sombre, filmé avec un autre appareil : la face avant du téléphone émet des flashs lumineux, encore et encore, chaque seconde. La légende s'écrit toute seule : « Il prend des selfies de toi en permanence. Il te regarde. » Des millions de vues. La panique dans les commentaires.</p>
+
+<p>Voici notre travail : trier le mythe de la réalité. Parce que le mythe est faux, mais que la réalité documentée autour de votre téléphone est pire qu'une histoire de selfie, et personne ne fait de vidéos virales à ce sujet.</p>
+
+<h3>Le flash infrarouge : ce qui se passe vraiment</h3>
+
+<p>Ce clignotement, c'est l'<strong>illuminateur infrarouge</strong>, une pièce du matériel Face ID à l'avant du téléphone. Il projette une lumière infrarouge invisible pour mesurer la distance et détecter si vous êtes présent et si vous regardez l'écran. C'est ainsi que l'écran s'assombrit quand vous regardez ailleurs et agrandit une notification quand vous y jetez un coup d'œil.</p>
+
+<div class="fact-box">
+<p><strong>Le verdict :</strong> aucune photo n'est prise, et rien n'est envoyé nulle part. C'est un capteur de présence, pas un déclencheur d'appareil photo. Votre autre caméra peut voir les impulsions infrarouges ; votre œil, non. Autre correction : le capteur que les gens accusent n'est pas le LiDAR. Le LiDAR se trouve à l'arrière des iPhone Pro pour mesurer les pièces et les objets. Et une dernière précision : ce comportement n'existe pas sur « tous les téléphones ». C'est du matériel Face ID. Bien des téléphones Android ne l'ont pas du tout.</p>
+</div>
+
+<h3>Alors l'iPhone est innocent? Pas exactement.</h3>
+
+<p>La rumeur est fausse. Mais le dossier documenté sur la confidentialité chez Apple est réellement cahoteux, et la plupart des propriétaires d'iPhone n'ont jamais entendu ces histoires.</p>
+
+<h3>1. Des sous-traitants ont écouté des moments privés via Siri (2019)</h3>
+<p>Apple a confirmé qu'une petite portion des enregistrements de Siri, y compris des activations accidentelles captant des conversations privées, des renseignements médicaux confidentiels et d'autres moments sensibles, étaient révisés par des sous-traitants humains et même partagés avec des tiers. Apple s'est excusé et a modifié le programme. Mais le dossier est public.</p>
+
+<h3>2. Le projet de balayage de votre photothèque (2021-2023)</h3>
+<p>Apple avait annoncé un système qui aurait balayé les photos sur votre propre appareil avant leur synchronisation vers iCloud, à la recherche de contenu signalé. Les cryptographes et experts en sécurité ont averti que cela créait un mécanisme de surveillance réutilisable par des gouvernements. Après trois ans de contestation, Apple a abandonné le projet, admettant que balayer les données privées de chaque utilisateur créerait de nouvelles vulnérabilités. Relisez cela deux fois : l'entreprise elle-même a conclu que le balayage massif de données privées est dangereux.</p>
+
+<h3>3. iCloud n'est pas ce que vous croyez</h3>
+<p>Votre iPhone est extrêmement bien chiffré ; Apple est célèbre pour ne pas pouvoir le déverrouiller, même pour les autorités. Mais les sauvegardes iCloud standards sont un autre animal : leur contenu peut être accessible à Apple et a été remis dans le cadre d'enquêtes criminelles. Beaucoup de gens croient que leur « nuage » hérite de la protection du téléphone. Par défaut, ce n'est pas le cas. Les sauvegardes chiffrées de bout en bout existent, mais il faut les activer délibérément.</p>
+
+<h3>4. Le battement de cœur silencieux</h3>
+<p>Une étude évaluée par les pairs du Trinity College de Dublin (professeur Douglas Leith) a révélé qu'un iPhone inactif, avec toutes les options de collecte désactivées, contacte Apple environ toutes les 4,5 minutes et partage des identifiants comme le numéro de série du matériel. La même étude a révélé qu'Apple peut consigner quels appareils se trouvent à proximité par Bluetooth. La désactivation n'empêchait rien.</p>
+
+<h3>Maintenant, le volet Android</h3>
+
+<p>La même étude du Trinity College a mesuré les deux écosystèmes, et Android fait pire sur le volume : un Pixel inactif envoyait à Google environ <strong>1 Mo toutes les 12 heures, soit environ 20 fois plus que les 52 Ko de l'iPhone</strong>, y compris l'IMEI, le numéro de téléphone, le numéro de série de la carte SIM et plus encore, même sur des appareils où l'utilisateur n'avait jamais ouvert de compte Google.</p>
+
+<p>Android standard s'enfonce aussi profondément dans les services Google : historique de position, profilage publicitaire, services Play exécutés avec des privilèges au cœur du système. Sur un téléphone Android standard, la portée de Google est simplement plus large. Voilà le portrait honnête.</p>
+
+<div class="tip-box">
+<p><strong>Le pointage, franchement :</strong> iPhone : moins de données divulguées, mais un dossier de tentatives de surveillance et un iCloud opaque par défaut. Android : beaucoup plus de télémétrie, mais plus de liberté pour remplacer le système. Aucun des deux n'est « privé ». Les deux appellent la maison. La différence, c'est ce que vous pouvez faire, ce qui nous amène au seul téléphone que nous pouvons recommander sans croiser les doigts.</p>
+</div>
+
+<h3>GrapheneOS : à quoi ressemble un téléphone vraiment privé</h3>
+
+<p>Nous menons nos communications d'affaires sur GrapheneOS, et voici ce que c'est, sans détour : un système d'exploitation durci et à code source ouvert pour les téléphones Google Pixel, sans Google dedans à moins que vous ne l'invitiez.</p>
+
+<ul>
+<li><strong>Sans Google par défaut.</strong> Le système arrive sans aucune application ni service Google. Rien ne fait le lien avec Mountain View à moins que vous ne le décidiez.</li>
+<li><strong>Google Play « en bac à sable », si vous le voulez.</strong> Besoin d'une application bancaire? Vous pouvez installer les services Play comme une application ordinaire sans privilèges : comme n'importe quelle autre application, sans pouvoirs spéciaux, entièrement supprimable. C'est la fonction qui rend la vie quotidienne possible.</li>
+<li><strong>Des profils utilisateurs comme des murs.</strong> Vous pouvez créer des profils séparés : un pour le travail, un pour la famille, un verrouillé pour les voyages. Chaque profil a ses propres clés de chiffrement, ses propres applications, ses propres données. Les applications d'un profil ne peuvent ni voir ni communiquer avec celles d'un autre. Android standard permet environ 4 profils ; GrapheneOS en permet jusqu'à 32.</li>
+<li><strong>Des contrôles réels.</strong> Permissions par réseau, capteurs coupés globalement d'une seule commande, et une configuration VPN par profil.</li>
+<li><strong>Mises à jour de sécurité régulières</strong>, généralement plus rapides que sur Android standard.</li>
+</ul>
+
+<p>Pour un propriétaire de PME, l'argument est simple : vos conversations avec les clients, vos contrats et vos identifiants vivent dans un espace muré sur un téléphone qui ne répond à aucune entreprise de publicité. Si les données d'un client sont sur votre téléphone, elles sont défendues par conception, pas par une case à cocher dans les réglages.</p>
+
+<h3>Au-delà du téléphone : la boîte que personne ne vérifie, votre routeur</h3>
+
+<p>Voici la partie à laquelle presque personne ne pense. Tous les appareils de votre maison ou bureau font passer leur trafic par une seule boîte : votre routeur. Et le routeur fourni par votre fournisseur Internet est souvent l'ordinateur le moins mis à jour et le plus négligé du bâtiment. La journaliste Naomi Brockwell (NBTV) a couvert ce sujet en profondeur, notamment dans une entrevue avec le fondateur de Protectli, une entreprise qui fabrique de petits appareils pare-feu dédiés.</p>
+
+<p>L'idée : remplacer ou contourner la boîte du fournisseur par un système pare-feu à code source ouvert comme <strong>pfSense</strong>, installé sur un petit appareil dédié. Vous obtenez le contrôle total de ce qui entre et sort de votre réseau, des règles par appareil, un VPN pour tout le bâtiment et une visibilité sur ce à quoi vos appareils parlent réellement. C'est la différence entre faire confiance à chaque gadget de votre bureau et avoir un gardien qui ne répond qu'à vous.</p>
+
+<div class="warn-box">
+<p><strong>Un mot d'honnêteté :</strong> un boîtier pfSense est un projet de fin de semaine, pas un achat magique. C'est pour un bureau à la maison ou une PME qui veut un vrai contrôle. Si ce n'est pas encore vous, il reste une amélioration à faire ce soir, en cinq minutes, gratuitement. Ça s'appelle le DNS.</p>
+</div>
+
+<h3>Le DNS : l'annuaire téléphonique que votre fournisseur lit par-dessus votre épaule</h3>
+
+<p>Chaque visite de site commence par une requête : votre appareil demande à un résolveur DNS de traduire un nom en adresse. Par défaut, la question va à votre fournisseur Internet, ou à celui qui contrôle votre routeur. Résultat : la liste de presque tous les sites que vous visitez est observée, consignée ou revendue, même sur des sites chiffrés. Et une configuration négligente peut provoquer des fuites DNS, où vos requêtes s'échappent par des canaux que vous n'avez jamais choisis, dévoilant votre navigation malgré votre VPN.</p>
+
+<p>La correction prend quelques minutes. Passez votre DNS à un fournisseur qui ne consigne pas et ne vend rien :</p>
+
+<ul>
+<li><strong>Quad9 (9.9.9.9)</strong> : une fondation à but non lucratif suisse. Elle ne conserve pas d'adresses IP liées à vos requêtes et bloque automatiquement les domaines connus de logiciels malveillants et d'hameçonnage ; selon des évaluations indépendantes, elle en bloque la grande majorité. Gratuit, financée par des commanditaires, sans publicité, sans vente de données. C'est ce que nous utilisons.</li>
+<li><strong>Cloudflare (1.1.1.1)</strong> : s'engage par écrit à ne pas vendre les données de navigation et à purger les journaux en dedans de 24 heures.</li>
+<li><strong>NextDNS</strong> : très configurable, avec des journaux détaillés seulement si vous choisissez de les garder.</li>
+</ul>
+
+<p>Vous pouvez changer le DNS dans les réglages de votre routeur une seule fois et protéger tous les appareils du bâtiment, ou appareil par appareil pour les téléphones et ordinateurs portables en déplacement. Combinez un DNS privé à vos appareils actuels, et vous venez de fermer la fenêtre la plus grande ouverte de votre vie numérique.</p>
+
+<h3>Votre liste d'actions, ce soir</h3>
+
+<ul>
+<li>Cessez de craindre le clignotement infrarouge : c'est un capteur de présence, pas un paparazzi</li>
+<li>Si vous utilisez les sauvegardes iCloud ou Google, vérifiez ce qui est réellement chiffré de bout en bout, et activez ce qui ne l'est pas</li>
+<li>Passez votre DNS à Quad9 ou Cloudflare, idéalement sur le routeur pour que tout ce qui est derrière en profite</li>
+<li>Mettez à jour le micrologiciel de votre routeur et changez son mot de passe d'administration par défaut</li>
+<li>Si vous êtes sérieux : envisagez GrapheneOS pour votre prochain téléphone, et un boîtier pfSense pour le bureau</li>
+</ul>
+
+<div class="cta">
+<p><strong>La pratique, pas la panique</strong></p>
+<p>Nous menons l'ensemble de nos activités sur une infrastructure axée sur la vie privée, et nous aidons nos clients à faire de même. Vos données restent les vôtres. <a href="index.html">Découvrez notre façon de travailler &#8594;</a></p>
+</div>
+</span>
+
+</article>
+
+<footer>
+<p>&copy; 2026 VIP Marketing Solutions - <span class="en">This site uses no cookies, no trackers, and loads nothing from third parties.</span><span class="fr">Ce site n'utilise aucun témoin, aucun traceur, et ne charge rien de tiers.</span></p>
+</footer>
+
+<script>
+function toggleLang() {
+  var b = document.body;
+  var btn = document.getElementById('langBtn');
+  if (b.classList.contains('lang-en')) {
+    b.classList.remove('lang-en'); b.classList.add('lang-fr');
+    btn.textContent = 'EN';
+  } else {
+    b.classList.remove('lang-fr'); b.classList.add('lang-en');
+    btn.textContent = 'FR';
+  }
+}
+
+var header = document.getElementById("site-header");
+window.addEventListener("scroll", function () {
+  if (window.scrollY > 40) header.classList.add("condensed");
+  else header.classList.remove("condensed");
+}, { passive: true });
+
+var bar = document.getElementById("progress-bar");
+function updateBar() {
+  var h = document.documentElement.scrollHeight - window.innerHeight;
+  var p = h > 0 ? (window.scrollY / h) * 100 : 0;
+  bar.style.width = p + "%";
+}
+window.addEventListener("scroll", updateBar, { passive: true });
+updateBar();
+</script>
+
+</body>
+</html>

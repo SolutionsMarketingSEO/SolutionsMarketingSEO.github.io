@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Articles &amp; Insights | VIP Marketing Solutions</title>
+<meta name="description" content="Plain-language guides on SEO, privacy, and digital marketing for Quebec small businesses. Bilingual articles from VIP Marketing Solutions, Montreal.">
+<style>
+  :root {
+    --gold: #B08D3E;
+    --gold-light: #D9C99A;
+    --dark: #23252B;
+    --cream: #F5F2EA;
+    --text: #3a3a40;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: Georgia, "Times New Roman", serif;
+    background: var(--cream); color: var(--text); line-height: 1.7;
+  }
+
+  header {
+    background: var(--dark); color: #fff;
+    padding: 20px 0; border-bottom: 3px solid var(--gold);
+    position: sticky; top: 0; z-index: 50;
+    transition: padding 0.3s ease, box-shadow 0.3s ease;
+  }
+  header.condensed {
+    padding: 10px 0;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.45);
+  }
+  header .hwrap {
+    max-width: 900px; margin: 0 auto; padding: 0 24px;
+    display: flex; justify-content: space-between; align-items: center;
+    flex-wrap: wrap; gap: 10px;
+  }
+  header h1 { font-size: 1.2rem; letter-spacing: 2px; }
+  header h1 span { color: var(--gold-light); }
+  header nav a, header nav button {
+    color: var(--gold-light); text-decoration: none;
+    margin-left: 14px; font-size: 0.95rem;
+    background: none; border: none; cursor: pointer;
+    font-family: inherit; padding: 0;
+    transition: color 0.25s ease;
+  }
+  header nav a:hover, header nav button:hover { color: #fff; }
+
+  .page-title {
+    max-width: 900px; margin: 0 auto; padding: 50px 24px 8px;
+    text-align: center;
+  }
+  .eyebrow {
+    color: var(--gold); font-size: 0.75rem; letter-spacing: 3px;
+    text-transform: uppercase; font-family: Arial, sans-serif;
+    margin-bottom: 6px;
+  }
+  .page-title h2 { font-size: 1.9rem; color: var(--dark); line-height: 1.3; }
+
+  .list {
+    max-width: 900px; margin: 10px auto 50px; padding: 0 24px;
+    display: grid; gap: 22px;
+  }
+
+  .post-card {
+    display: flex; align-items: stretch; gap: 18px;
+    background: #fff; border: 1px solid #D8CFBA;
+    border-left: 4px solid var(--gold); border-radius: 4px;
+    padding: 18px; text-decoration: none; color: inherit;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+  }
+  .post-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 24px rgba(0,0,0,0.12);
+  }
+  .post-thumb {
+    flex: 0 0 110px; height: 86px;
+    object-fit: cover; border-radius: 4px;
+    border-bottom: 2px solid var(--gold);
+    display: block;
+  }
+  .post-card .info { flex: 1; }
+  .post-card h3 { color: var(--dark); font-size: 1.1rem; line-height: 1.35; margin-bottom: 6px; }
+  .post-card h3 span.arrow { color: var(--gold); }
+  .post-card p.teaser { font-size: 0.92rem; color: #555; }
+  .post-card p.meta {
+    font-size: 0.8rem; color: #999; font-style: italic; margin-top: 8px;
+  }
+
+  footer {
+    background: var(--dark); color: #8a8a8a; text-align: center;
+    padding: 30px 20px; font-size: 0.85rem;
+    border-top: 3px solid var(--gold);
+    font-family: Arial, sans-serif;
+  }
+
+  .fr { display: none; }
+  body.lang-fr .en { display: none; }
+  body.lang-fr .fr { display: block; }
+
+  @keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+  .post-card { animation: fadeInUp 0.7s ease both; }
+  .post-card:nth-child(2) { animation-delay: 0.12s; }
+  .post-card:nth-child(3) { animation-delay: 0.24s; }
+  .post-card:nth-child(4) { animation-delay: 0.36s; }
+
+  @media (prefers-reduced-motion: reduce) {
+    .post-card { animation: none; }
+    html { scroll-behavior: auto; }
+  }
+
+  @media (max-width: 560px) {
+    .post-card { flex-direction: column; }
+    .post-thumb { flex: none; width: 100%; height: 120px; }
+  }
+</style>
+</head>
+<body class="lang-en">
+
+<header id="site-header">
+  <div class="hwrap">
+    <h1>SOLUTIONS <span>MARKETING</span> VIP</h1>
+    <nav>
+      <a href="index.html"><span class="en">Home</span><span class="fr">Accueil</span></a>
+      <button class="toggle-btn" onclick="toggleLang()" id="langBtn" style="background:#B08D3E;color:#fff;border:none;padding:8px 18px;cursor:pointer;font-weight:bold;border-radius:3px;font-family:Georgia,serif;">FR</button>
+    </nav>
+  </div>
+</header>
+
+<div class="page-title">
+  <div class="en">
+    <div class="eyebrow">Insights</div>
+    <h2>Plain Language. No Snake Oil.</h2>
+  </div>
+  <div class="fr">
+    <div class="eyebrow">Nos articles</div>
+    <h2>En langage clair. Sans enrobage.</h2>
+  </div>
+</div>
+
+<div class="list">
+
+  <a class="post-card" href="blog.html">
+    <img class="post-thumb" src="blog-hero.png" alt="Laptop surrounded by data collection icons">
+    <div class="info">
+      <div class="en">
+        <h3>Your Business Data, Their Business Model <span class="arrow">&#8594;</span></h3>
+        <p class="teaser">Microsoft Recall, Gmail, Meta: what is fact, what is fiction, and the one Google story that should actually worry your business.</p>
+        <p class="meta">September 2026 - 6 min read</p>
+      </div>
+      <div class="fr">
+        <h3>Les données de votre entreprise, leur modèle d'affaires <span class="arrow">&#8594;</span></h3>
+        <p class="teaser">Recall de Microsoft, Gmail, Meta : le vrai du faux, et la seule histoire Google qui devrait vraiment vous inquiéter.</p>
+        <p class="meta">Septembre 2026 - 6 min de lecture</p>
+      </div>
+    </div>
+  </a>
+
+  <a class="post-card" href="blog2.html">
+    <img class="post-thumb" src="blog2-hero.png" alt="Magnifying glass inspecting a website with data flowing out">
+    <div class="info">
+      <div class="en">
+        <h3>Why Your Website Shouldn't Have Google Analytics <span class="arrow">&#8594;</span></h3>
+        <p class="teaser">It slows your site, feeds Google your client data, and you probably never open the dashboard anyway. Here is what we use instead.</p>
+        <p class="meta">September 2026 - 4 min read</p>
+      </div>
+      <div class="fr">
+        <h3>Pourquoi votre site ne devrait pas avoir Google Analytics <span class="arrow">&#8594;</span></h3>
+        <p class="teaser">Ça ralentit votre site, ça nourrit Google avec les données de vos clients, et vous n'ouvrez probablement jamais le tableau de bord. Voici ce qu'on utilise à la place.</p>
+        <p class="meta">Septembre 2026 - 4 min de lecture</p>
+      </div>
+    </div>
+  </a>
+
+  <a class="post-card" href="blog3.html">
+    <img class="post-thumb" src="blog3-hero.png" alt="Scales of justice with a padlock and compliance checklist">
+    <div class="info">
+      <div class="en">
+        <h3>Quebec's Law 25: What Your Small Business Actually Needs to Do <span class="arrow">&#8594;</span></h3>
+        <p class="teaser">Privacy officer, 30-day responses, incident reports. The plain-language checklist, whether you are a one-person company or fifty.</p>
+        <p class="meta">September 2026 - 5 min read</p>
+      </div>
+      <div class="fr">
+        <h3>Loi 25 : ce que votre PME doit vraiment faire <span class="arrow">&#8594;</span></h3>
+        <p class="teaser">Responsable de la vie privée, réponses en 30 jours, signalements d'incidents. La liste en langage clair, que vous soyez seul ou cinquante.</p>
+        <p class="meta">Septembre 2026 - 5 min de lecture</p>
+      </div>
+    </div>
+  </a>
+
+  <a class="post-card" href="blog4.html">
+    <img class="post-thumb" src="blog4-hero.png" alt="Five golden shields representing five privacy tools">
+    <div class="info">
+      <div class="en">
+        <h3>5 Free Privacy Tools Every Entrepreneur Should Use <span class="arrow">&#8594;</span></h3>
+        <p class="teaser">Brave, Proton, Bitwarden, Signal, Linux Mint. Protecting your business data costs nothing but better habits.</p>
+        <p class="meta">September 2026 - 5 min read</p>
+      </div>
+      <div class="fr">
+        <h3>5 outils gratuits de confidentialité pour entrepreneurs <span class="arrow">&#8594;</span></h3>
+        <p class="teaser">Brave, Proton, Bitwarden, Signal, Linux Mint. Protéger vos données d'entreprise ne coûte rien, sinon de meilleures habitudes.</p>
+        <p class="meta">Septembre 2026 - 5 min de lecture</p>
+      </div>
+    </div>
+  </a>
+
+</div>
+
+<footer>
+<p>&copy; 2026 VIP Marketing Solutions - <span class="en">This site uses no cookies, no trackers, and loads nothing from third parties.</span><span class="fr">Ce site n'utilise aucun témoin, aucun traceur, et ne charge rien de tiers.</span></p>
+</footer>
+
+<script>
+function toggleLang() {
+  var b = document.body;
+  var btn = document.getElementById('langBtn');
+  if (b.classList.contains('lang-en')) {
+    b.classList.remove('lang-en'); b.classList.add('lang-fr');
+    btn.textContent = 'EN';
+  } else {
+    b.classList.remove('lang-fr'); b.classList.add('lang-en');
+    btn.textContent = 'FR';
+  }
+}
+
+var header = document.getElementById("site-header");
+window.addEventListener("scroll", function () {
+  if (window.scrollY > 40) header.classList.add("condensed");
+  else header.classList.remove("condensed");
+}, { passive: true });
+</script>
+
+</body>
+</html>

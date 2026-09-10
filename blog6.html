@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Android or GrapheneOS: Which Phone Deserves Your Client Data? | VIP Marketing Solutions</title>
+<meta name="description" content="A plain-language comparison of stock Android and GrapheneOS for business owners who carry client data, including features Google never advertises.">
+<style>
+  :root {
+    --gold: #B08D3E;
+    --gold-light: #D9C99A;
+    --dark: #23252B;
+    --cream: #F5F2EA;
+    --text: #3a3a40;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: Georgia, "Times New Roman", serif;
+    background: var(--cream); color: var(--text); line-height: 1.75;
+  }
+
+  #progress-bar {
+    position: fixed; top: 0; left: 0; z-index: 100;
+    height: 3px; width: 0%;
+    background: var(--gold);
+  }
+
+  header {
+    background: var(--dark); color: #fff;
+    padding: 20px 0; border-bottom: 3px solid var(--gold);
+    position: sticky; top: 0; z-index: 50;
+    transition: padding 0.3s ease, box-shadow 0.3s ease;
+  }
+  header.condensed {
+    padding: 10px 0;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.45);
+  }
+  header .hwrap {
+    max-width: 900px; margin: 0 auto; padding: 0 24px;
+    display: flex; justify-content: space-between; align-items: center;
+    flex-wrap: wrap; gap: 10px;
+  }
+  header h1 { font-size: 1.2rem; letter-spacing: 2px; }
+  header h1 span { color: var(--gold-light); }
+  header nav a, header nav button {
+    color: var(--gold-light); text-decoration: none;
+    margin-left: 14px; font-size: 0.95rem;
+    background: none; border: none; cursor: pointer;
+    font-family: inherit; padding: 0;
+    transition: color 0.25s ease;
+  }
+  header nav a:hover, header nav button:hover { color: #fff; }
+
+  article {
+    max-width: 720px; margin: 36px auto; padding: 34px 26px;
+    background: #fff; border: 1px solid #D8CFBA;
+    border-top: 4px solid var(--gold); border-radius: 4px;
+  }
+  h2 { font-size: 1.65em; color: var(--dark); margin-top: 36px; line-height: 1.3; }
+  h3 { color: var(--dark); margin-top: 28px; }
+  .post-meta { color: #999; font-style: italic; font-size: 0.9em; }
+  p { margin: 14px 0; }
+  ul { margin: 14px 0 14px 22px; }
+  li { margin: 6px 0; }
+
+  .tip-box {
+    background: var(--cream); border-left: 4px solid var(--gold);
+    padding: 15px 18px; margin: 22px 0; border-radius: 0 4px 4px 0;
+  }
+  .warn-box {
+    background: #fbe9e7; border-left: 4px solid #c62828;
+    padding: 15px 18px; margin: 22px 0; border-radius: 0 4px 4px 0;
+  }
+  .fact-box {
+    background: #eef3ee; border-left: 4px solid #4a7c59;
+    padding: 15px 18px; margin: 22px 0; border-radius: 0 4px 4px 0;
+  }
+  .cta {
+    background: var(--dark); color: var(--gold-light);
+    padding: 26px; margin: 40px 0 10px; text-align: center;
+    border-radius: 4px;
+  }
+  .cta a { color: #fff; }
+
+  .article-img {
+    display: block; width: 100%; max-width: 420px; max-height: 160px;
+    object-fit: cover; border-radius: 4px;
+    border-bottom: 3px solid var(--gold);
+    margin: 0 auto 18px;
+  }
+
+  footer {
+    background: var(--dark); color: #8a8a8a; text-align: center;
+    padding: 30px 20px; font-size: 0.85rem;
+    border-top: 3px solid var(--gold);
+    font-family: Arial, sans-serif;
+  }
+
+  .fr { display: none; }
+  body.lang-fr .en { display: none; }
+  body.lang-fr .fr { display: block; }
+
+  @keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+  article { animation: fadeInUp 0.7s ease both; }
+
+  @media (prefers-reduced-motion: reduce) {
+    article { animation: none; }
+    html { scroll-behavior: auto; }
+  }
+</style>
+</head>
+<body class="lang-en">
+
+<div id="progress-bar"></div>
+
+<header id="site-header">
+  <div class="hwrap">
+    <h1>SOLUTIONS <span>MARKETING</span> VIP</h1>
+    <nav>
+      <a href="index.html"><span class="en">Home</span><span class="fr">Accueil</span></a>
+      <a href="blog-list.html"><span class="en">Articles</span><span class="fr">Articles</span></a>
+      <button class="toggle-btn" onclick="toggleLang()" id="langBtn" style="background:#B08D3E;color:#fff;border:none;padding:8px 18px;cursor:pointer;font-weight:bold;border-radius:3px;font-family:Georgia,serif;">FR</button>
+    </nav>
+  </div>
+</header>
+
+<article>
+
+<img src="blog6-hero.png" alt="Two smartphones in gold outline, one surrounded by tracking arrows, one protected behind a gold wall" class="article-img">
+
+<span class="en">
+<h2>Android or GrapheneOS: Which Phone Deserves Your Client Data?</h2>
+<p class="post-meta">Published September 2026 - VIP Marketing Solutions</p>
+
+<p>This article is part two of our phone privacy series. In part one we busted the viral iPhone "secret selfie" rumor and looked at what both Apple and Google actually collect. Today we go deeper on the phone most of the world carries, Android, and the one question a business owner should ask: when my client data rides in my pocket, who built the car?</p>
+
+<h3>First, the case against stock Android, in one paragraph</h3>
+
+<p>In late 2022, forty U.S. states settled with Google for <strong>$391.5 million</strong>, at the time the largest multistate privacy settlement in U.S. history. The accusation, triggered by a 2018 Associated Press investigation: since at least 2014, Google continued to track users' locations even after they turned location history off, by harvesting location from other services like Search and Maps and tying it to their Google account. Google's response was to change some settings and pay the fine. Let that sink in: the company took years of location data from people who said no.</p>
+
+<p>Remember the Trinity College Dublin study from part one: an idle, opted-out Pixel sent Google roughly 1 MB of data every 12 hours, versus the iPhone's 52 KB. Android is, measured on the wire, the chattiest mainstream operating system on earth. The reason is not a mystery: Google's core business is knowing people. Android is a data-gathering machine that happens to also make phone calls beautifully.</p>
+
+<h3>To be fair, what Android gets right</h3>
+
+<p>Honesty first. Android is not a villain's tool. It offers open-source foundations, real permission controls, a flagship-grade security patch rhythm on Pixel and Samsung devices, and more freedom of choice than iOS. If you strip Google's apps, revoke permissions, and use a privacy DNS, you can blunt much of the worst data leakage without leaving Android. Many privacy-conscious people do exactly that. It's the ceiling that's the problem: you are hardening a house whose landlord still holds the keys.</p>
+
+<div class="fact-box">
+<p><strong>The key distinction:</strong> stock Android treats Google Play Services as the heart of the system, running with privileges no user app ever gets. You can lock doors and close windows, but the landlord walks the halls at night. GrapheneOS rebuilds the house without the landlord.</p>
+</div>
+
+<h3>GrapheneOS, for a business owner's eyes</h3>
+
+<p>GrapheneOS is an open-source, security-hardened operating system that installs on Google Pixel phones. Yes: you buy a Pixel, then replace Google's operating system entirely. It is run by a non-profit, funded by donations, and built by people whose income does not depend on your data. Here is what matters for your business.</p>
+
+<ul>
+<li><strong>No Google inside, unless you invite it.</strong> Out of the box: zero Google apps, zero Google services, nothing phoning home. Your client data's default state is silence.</li>
+<li><strong>Sandboxed Google Play when you need it.</strong> Banking apps, Uber, some authenticators need Play Services. GrapheneOS lets you install them as ordinary, unprivileged apps with no special access, removable in one tap. The difference from stock Android: there, Play Services own the building. Here, they rent a room, and you can evict them.</li>
+<li><strong>User profiles: the walls between your worlds.</strong> This is the feature we consider a business essential. Each profile has its own apps, its own data, its own encryption keys. Apps in one profile cannot see or communicate with apps in another. A work profile for client files and banking. A personal profile for the family group chat. A "travel burner" profile for a phone that crosses borders. Stock Android allows a handful of secondary profiles; GrapheneOS allows far more, up to 32.</li>
+<li><strong>Hardened at the seams.</strong> The included Vanadium browser is a seriously hardened build of Chromium. The Auditor app uses hardware-backed cryptographic verification to confirm, from another phone, that your device is genuinely running untampered GrapheneOS. You can disable the USB-C port, the microphone, and the cameras at the hardware level, not with tape. Wi-Fi and Bluetooth switch off automatically when unused, and MAC addresses randomize per network.</li>
+<li><strong>Encrypted backups, on your terms.</strong> The built-in Seedvault tool backs up your apps and data, encrypted, to storage you choose, including your own USB drive. No mandatory cloud account, ever.</li>
+</ul>
+
+<h3>The honest caveats, because we promised no snake oil</h3>
+
+<div class="warn-box">
+<p><strong>Know before you switch:</strong> (1) GrapheneOS runs only on Google Pixel hardware, which is the irony of the project: the most private OS rides on the best hardware from the world's biggest data collector, chosen precisely because Pixel's security hardware allows features nothing else can match. (2) Setup takes an evening, following official instructions, and is not for the impatient. (3) A few apps that aggressively require Google services may refuse to run without the sandboxed Play you installed; that covers almost everyone's daily list, but check your must-haves first. (4) Warranty and banking-app support vary; test your bank's app before committing fully.</p>
+</div>
+
+<h3>Why this belongs in a business publication</h3>
+
+<p>Because your phone is where business actually happens now. Contracts get signed over messaging apps. Clients text you at 8 p.m. Your email, your files, your notes about next quarter, all ride along in your pocket through gas stations, airports, and coffee shop Wi-Fi. If you run a business in Quebec, Law 25 makes you responsible for the personal information you handle, including how you safeguard it. A locked-down phone with walled profiles is not a hacker hobby. It is business hygiene, the same way a shredder in the office is business hygiene.</p>
+
+<div class="tip-box">
+<p><strong>Our suggestion for a sane rollout:</strong> keep your current phone as-is. Next time you would buy a phone anyway, buy a Pixel secondhand if you like, install GrapheneOS on it, and run it in parallel for two weeks alongside your daily driver. Use it for email and banking first, then move client conversations to it once you trust it. Total cost: the price of a used Pixel. Total risk: near zero, since your old phone keeps working the whole time.</p>
+</div>
+
+<h3>Part three preview: the office itself</h3>
+
+<p>Phones are only half the story. In the next article, we move upstream to your internet connection: the router your provider gave you, the DNS your whole office breathes through, and where pfSense fits when you want a gatekeeper that answers only to you.</p>
+
+<div class="cta">
+<p><strong>Your data, defended by design</strong></p>
+<p>We run our business on privacy-first infrastructure, and we help our clients build theirs. Your data stays yours. <a href="index.html">Learn how we work &#8594;</a></p>
+</div>
+</span>
+
+<span class="fr">
+<h2>Android ou GrapheneOS : quel téléphone mérite les données de vos clients?</h2>
+<p class="post-meta">Publié en septembre 2026 - Solutions Marketing VIP</p>
+
+<p>Cet article est la deuxième partie de notre série sur la confidentialité mobile. Dans la première, nous avons démoli la rumeur virale du « selfie secret » de l'iPhone et examiné ce qu'Apple et Google recueillent vraiment. Aujourd'hui, nous creusons le téléphone que transporte la majorité de la planète, Android, et la seule question qu'un dirigeant devrait se poser : quand mes données clients voyagent dans ma poche, qui a construit la voiture?</p>
+
+<h3>D'abord, le dossier contre Android standard, en un paragraphe</h3>
+
+<p>Fin 2022, quarante États américains ont conclu un règlement avec Google pour <strong>391,5 millions de dollars</strong>, à l'époque le plus important règlement relatif à la vie privée jamais conclu entre plusieurs États. L'accusation, déclenchée par une enquête de l'Associated Press en 2018 : depuis au moins 2014, Google continuait de suivre la localisation des utilisateurs même après qu'ils avaient désactivé l'historique de position, en récoltant la localisation via d'autres services comme Search et Maps et en la rattachant à leur compte Google. La réponse de Google : modifier certains réglages et payer l'amende. Laissez cela pénétrer : l'entreprise a pris des années de données de localisation à des gens qui avaient dit non.</p>
+
+<p>Rappelez-vous l'étude du Trinity College de Dublin vue en première partie : un Pixel inactif, avec les options désactivées, envoyait à Google environ 1 Mo de données toutes les 12 heures, contre 52 Ko pour l'iPhone. Android est, mesuré sur le fil, le système d'exploitation grand public le plus bavard de la planète. Ce n'est pas un mystère : le cœur du métier de Google, c'est de connaître les gens. Android est une machine à recueillir des données qui, accessoirement, fait aussi d'excellents appels téléphoniques.</p>
+
+<h3>Par honnêteté, ce qu'Android réussit</h3>
+
+<p>L'honnêteté d'abord. Android n'est pas l'outil d'un méchant. Il offre des fondations à code source ouvert, de vrais contrôles de permissions, un rythme de correctifs de sécurité de haut niveau sur Pixel et Samsung, et plus de liberté de choix qu'iOS. Si vous retirez les applications Google, révoquez les permissions et utilisez un DNS privé, vous pouvez émousser une bonne part de la pire fuite de données sans quitter Android. Bien des gens soucieux de leur vie privée font exactement cela. Le problème, c'est le plafond : vous blindiez une maison dont le propriétaire garde encore les clés.</p>
+
+<div class="fact-box">
+<p><strong>La distinction clé :</strong> Android standard traite les services Google Play comme le cœur du système, exécutés avec des privilèges qu'aucune application utilisateur n'obtient jamais. Vous pouvez fermer les portes et les fenêtres, mais le propriétaire circule dans les couloirs la nuit. GrapheneOS reconstruit la maison sans le propriétaire.</p>
+</div>
+
+<h3>GrapheneOS, pour les yeux d'un dirigeant</h3>
+
+<p>GrapheneOS est un système d'exploitation à code source ouvert et durci pour la sécurité, qui s'installe sur les téléphones Google Pixel. Oui : vous achetez un Pixel, puis remplacez entièrement le système d'exploitation de Google. Il est mené par un organisme à but non lucratif, financé par des dons, et construit par des gens dont le revenu ne dépend pas de vos données. Voici ce qui compte pour votre entreprise.</p>
+
+<ul>
+<li><strong>Aucun Google dedans, à moins que vous ne l'invitiez.</strong> Hors de la boîte : zéro application Google, zéro service Google, rien qui appelle la maison. L'état par défaut des données de vos clients, c'est le silence.</li>
+<li><strong>Google Play en bac à sable, quand vous en avez besoin.</strong> Applications bancaires, Uber, certains authentificateurs exigent les services Play. GrapheneOS vous permet de les installer comme des applications ordinaires et sans privilèges, supprimables d'un geste. La différence avec Android standard : là-bas, les services Play sont propriétaires de l'immeuble. Ici, ils louent une chambre, et vous pouvez les expulser.</li>
+<li><strong>Les profils utilisateurs : les murs entre vos mondes.</strong> C'est la fonction que nous considérons comme essentielle en affaires. Chaque profil a ses applications, ses données, ses clés de chiffrement. Les applications d'un profil ne peuvent ni voir ni communiquer avec celles d'un autre. Un profil travail pour les dossiers clients et la banque. Un profil personnel pour le groupe familial. Un profil « voyage » verrouillé pour un téléphone qui traverse les frontières. Android standard permet quelques profiles secondaires ; GrapheneOS en permet bien plus, jusqu'à 32.</li>
+<li><strong>Durci jusqu'aux coutures.</strong> Le navigateur Vanadium intégré est une version sérieusement durcie de Chromium. L'application Auditor utilise une vérification cryptographique matérielle pour confirmer, depuis un autre téléphone, que votre appareil exécute bien un GrapheneOS authentique et non altéré. Vous pouvez désactiver le port USB-C, le micro et les caméras au niveau du matériel, pas avec du ruban adhésif. Le Wi-Fi et le Bluetooth se coupent automatiquement quand ils sont inutilisés, et les adresses MAC se randomisent par réseau.</li>
+<li><strong>Sauvegardes chiffrées, à vos conditions.</strong> L'outil Seedvault intégré sauvegarde vos applications et vos données, chiffrées, vers l'espace de stockage de votre choix, y compris votre propre clé USB. Aucun compte infonuagique obligatoire, jamais.</li>
+</ul>
+
+<h3>Les mises en garde honnêtes, parce qu'on vous a promis sans huile de serpent</h3>
+
+<div class="warn-box">
+<p><strong>À savoir avant de basculer :</strong> (1) GrapheneOS ne fonctionne que sur le matériel Google Pixel, ce qui est l'ironie du projet : le système le plus privé roule sur le meilleur matériel du plus grand collectionneur de données au monde, choisi précisément parce que le matériel de sécurité du Pixel permet des fonctions que rien d'autre n'offre. (2) L'installation prend une soirée, en suivant les instructions officielles, et ne convient pas aux impatients. (3) Quelques applications qui exigent agressivement les services Google peuvent refuser de fonctionner sans le Play en bac à sable que vous aurez installé ; cela couvre la liste quotidienne de presque tout le monde, mais vérifiez d'abord vos incontournables. (4) La garantie et le soutien des applications bancaires varient ; testez l'application de votre banque avant de vous engager pleinement.</p>
+</div>
+
+<h3>Pourquoi cela figure dans une publication d'affaires</h3>
+
+<p>Parce que votre téléphone est l'endroit où les affaires se font maintenant. Les contrats se signent par messagerie. Les clients vous écrivent à 20 h. Votre courriel, vos fichiers, vos notes pour le prochain trimestre voyagent dans votre poche à travers les stations-service, les aéroports et les réseaux Wi-Fi des cafés. Si vous exploitez une entreprise au Québec, la Loi 25 vous rend responsable des renseignements personnels que vous traitez, y compris de la manière de les protéger. Un téléphone verrouillé aux profils murés n'est pas un passe-temps de pirate. C'est de l'hygiène d'affaires, comme le broyeur au bureau est de l'hygiène d'affaires.</p>
+
+<div class="tip-box">
+<p><strong>Notre suggestion pour un déploiement raisonnable :</strong> gardez votre téléphone actuel tel quel. La prochaine fois que vous devriez acheter un téléphone de toute façon, achetez un Pixel d'occasion si vous préférez, installez GrapheneOS, et faites-le rouler en parallèle pendant deux semaines avec votre téléphone quotidien. Utilisez-le d'abord pour le courriel et la banque, puis transférez-y les conversations clients une fois que vous lui faites confiance. Coût total : le prix d'un Pixel usagé. Risque total : quasi nul, puisque votre ancien téléphone fonctionne tout ce temps.</p>
+</div>
+
+<h3>Aperçu de la troisième partie : le bureau lui-même</h3>
+
+<p>Les téléphones ne sont que la moitié de l'histoire. Dans le prochain article, nous remontons vers votre connexion Internet : le routeur fourni par votre fournisseur, le DNS par lequel tout le bureau respire, et la place de pfSense quand vous voulez un gardien qui ne répond qu'à vous.</p>
+
+<div class="cta">
+<p><strong>Vos données, défendues par conception</strong></p>
+<p>Nous menons nos activités sur une infrastructure axée sur la vie privée, et nous aidons nos clients à bâtir la leur. Vos données restent les vôtres. <a href="index.html">Découvrez notre façon de travailler &#8594;</a></p>
+</div>
+</span>
+
+</article>
+
+<footer>
+<p>&copy; 2026 VIP Marketing Solutions - <span class="en">This site uses no cookies, no trackers, and loads nothing from third parties.</span><span class="fr">Ce site n'utilise aucun témoin, aucun traceur, et ne charge rien de tiers.</span></p>
+</footer>
+
+<script>
+function toggleLang() {
+  var b = document.body;
+  var btn = document.getElementById('langBtn');
+  if (b.classList.contains('lang-en')) {
+    b.classList.remove('lang-en'); b.classList.add('lang-fr');
+    btn.textContent = 'EN';
+  } else {
+    b.classList.remove('lang-fr'); b.classList.add('lang-en');
+    btn.textContent = 'FR';
+  }
+}
+
+var header = document.getElementById("site-header");
+window.addEventListener("scroll", function () {
+  if (window.scrollY > 40) header.classList.add("condensed");
+  else header.classList.remove("condensed");
+}, { passive: true });
+
+var bar = document.getElementById("progress-bar");
+function updateBar() {
+  var h = document.documentElement.scrollHeight - window.innerHeight;
+  var p = h > 0 ? (window.scrollY / h) * 100 : 0;
+  bar.style.width = p + "%";
+}
+window.addEventListener("scroll", updateBar, { passive: true });
+updateBar();
+</script>
+
+</body>
+</html>

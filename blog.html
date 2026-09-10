@@ -6,41 +6,127 @@
 <title>What Big Tech Really Collects About Your Business | VIP Marketing Solutions</title>
 <meta name="description" content="Microsoft Recall, Gmail scanning, Meta tracking: what is fact and what is fiction, and how to protect your small business data. A clear guide by VIP Marketing Solutions, Montreal.">
 <style>
-  body { font-family: Georgia, 'Times New Roman', serif; margin: 0; background: #fafafa; color: #222; line-height: 1.7; }
-  header { background: #1a1a2e; color: #fff; padding: 20px 5%; border-bottom: 4px solid #b08d3f; }
-  header h1 { margin: 0; font-size: 1.5em; letter-spacing: 1px; }
-  header nav { margin-top: 10px; }
-  header a { color: #d9c48a; text-decoration: none; margin-right: 20px; font-family: Arial, sans-serif; font-size: 0.95em; }
-  header a:hover { color: #fff; }
-  .toggle-btn { background: #b08d3f; color: #1a1a2e; border: none; padding: 8px 18px; cursor: pointer; font-weight: bold; border-radius: 3px; float: right; font-family: Arial, sans-serif; }
-  article { max-width: 760px; margin: 30px auto; padding: 0 20px; background: #fff; }
-  h2 { font-size: 1.6em; color: #1a1a2e; margin-top: 40px; }
-  h3 { color: #1a1a2e; }
-  .post-meta { color: #777; font-style: italic; font-size: 0.9em; }
-  .tip-box { background: #f4efe4; border-left: 4px solid #b08d3f; padding: 15px; margin: 20px 0; }
-  .warn-box { background: #fbe9e7; border-left: 4px solid #c62828; padding: 15px; margin: 20px 0; }
-  .cta { background: #1a1a2e; color: #d9c48a; padding: 25px; margin: 40px 0; text-align: center; }
+  :root {
+    --gold: #B08D3E;
+    --gold-light: #D9C99A;
+    --dark: #23252B;
+    --cream: #F5F2EA;
+    --text: #3a3a40;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: Georgia, "Times New Roman", serif;
+    background: var(--cream); color: var(--text); line-height: 1.75;
+  }
+
+  #progress-bar {
+    position: fixed; top: 0; left: 0; z-index: 100;
+    height: 3px; width: 0%;
+    background: var(--gold);
+  }
+
+  header {
+    background: var(--dark); color: #fff;
+    padding: 20px 0; border-bottom: 3px solid var(--gold);
+    position: sticky; top: 0; z-index: 50;
+    transition: padding 0.3s ease, box-shadow 0.3s ease;
+  }
+  header.condensed {
+    padding: 10px 0;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.45);
+  }
+  header .hwrap {
+    max-width: 900px; margin: 0 auto; padding: 0 24px;
+    display: flex; justify-content: space-between; align-items: center;
+    flex-wrap: wrap; gap: 10px;
+  }
+  header h1 { font-size: 1.2rem; letter-spacing: 2px; }
+  header h1 span { color: var(--gold-light); }
+  header nav a, header nav button {
+    color: var(--gold-light); text-decoration: none;
+    margin-left: 14px; font-size: 0.95rem;
+    background: none; border: none; cursor: pointer;
+    font-family: inherit; padding: 0;
+    transition: color 0.25s ease;
+  }
+  header nav a:hover, header nav button:hover { color: #fff; }
+
+  article {
+    max-width: 720px; margin: 36px auto; padding: 34px 26px;
+    background: #fff; border: 1px solid #D8CFBA;
+    border-top: 4px solid var(--gold); border-radius: 4px;
+  }
+  h2 { font-size: 1.65em; color: var(--dark); margin-top: 36px; line-height: 1.3; }
+  h3 { color: var(--dark); margin-top: 28px; }
+  .post-meta { color: #999; font-style: italic; font-size: 0.9em; }
+  p { margin: 14px 0; }
+  ul { margin: 14px 0 14px 22px; }
+  li { margin: 6px 0; }
+
+  .tip-box {
+    background: var(--cream); border-left: 4px solid var(--gold);
+    padding: 15px 18px; margin: 22px 0; border-radius: 0 4px 4px 0;
+  }
+  .warn-box {
+    background: #fbe9e7; border-left: 4px solid #c62828;
+    padding: 15px 18px; margin: 22px 0; border-radius: 0 4px 4px 0;
+  }
+  .cta {
+    background: var(--dark); color: var(--gold-light);
+    padding: 26px; margin: 40px 0 10px; text-align: center;
+    border-radius: 4px;
+  }
   .cta a { color: #fff; }
-  footer { text-align: center; color: #777; font-size: 0.85em; padding: 30px; font-family: Arial, sans-serif; }
+
+  .article-img {
+    display: block; width: 100%; max-width: 420px; max-height: 160px;
+    object-fit: cover; border-radius: 4px;
+    border-bottom: 3px solid var(--gold);
+    margin: 0 auto 18px;
+  }
+
+  footer {
+    background: var(--dark); color: #8a8a8a; text-align: center;
+    padding: 30px 20px; font-size: 0.85rem;
+    border-top: 3px solid var(--gold);
+    font-family: Arial, sans-serif;
+  }
+
   .fr { display: none; }
   body.lang-fr .en { display: none; }
   body.lang-fr .fr { display: block; }
+
+  @keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+  article { animation: fadeInUp 0.7s ease both; }
+
+  @media (prefers-reduced-motion: reduce) {
+    article { animation: none; }
+    html { scroll-behavior: auto; }
+  }
 </style>
 </head>
 <body class="lang-en">
 
-<header>
-  <button class="toggle-btn" onclick="toggleLang()" id="langBtn">FR</button>
-  <h1>VIP MARKETING SOLUTIONS</h1>
-  <nav>
-    <a href="index.html">&#8592; <span class="en">Home</span><span class="fr">Accueil</span></a>
-    <a href="mailto:solutions.marketing.vip@proton.me"><span class="en">Contact</span><span class="fr">Contact</span></a>
-  </nav>
+<div id="progress-bar"></div>
+
+<header id="site-header">
+  <div class="hwrap">
+    <h1>SOLUTIONS <span>MARKETING</span> VIP</h1>
+    <nav>
+      <a href="index.html"><span class="en">Home</span><span class="fr">Accueil</span></a>
+      <a href="blog-list.html"><span class="en">Articles</span><span class="fr">Articles</span></a>
+      <button class="toggle-btn" onclick="toggleLang()" id="langBtn" style="background:#B08D3E;color:#fff;border:none;padding:8px 18px;cursor:pointer;font-weight:bold;border-radius:3px;font-family:Georgia,serif;">FR</button>
+    </nav>
+  </div>
 </header>
 
 <article>
 
-<img src="blog-hero.png" alt="Laptop surrounded by data collection icons" style="display:block;width:100%;max-width:420px;max-height:160px;object-fit:cover;border-radius:4px;border-bottom:3px solid #b08d3f;margin:0 auto 12px;">
+<img src="blog-hero.png" alt="Laptop surrounded by data collection icons" class="article-img">
 
 <span class="en">
 <h2>Your Business Data, Their Business Model: What Big Tech Really Collects</h2>
@@ -184,6 +270,21 @@ function toggleLang() {
     btn.textContent = 'FR';
   }
 }
+
+var header = document.getElementById("site-header");
+window.addEventListener("scroll", function () {
+  if (window.scrollY > 40) header.classList.add("condensed");
+  else header.classList.remove("condensed");
+}, { passive: true });
+
+var bar = document.getElementById("progress-bar");
+function updateBar() {
+  var h = document.documentElement.scrollHeight - window.innerHeight;
+  var p = h > 0 ? (window.scrollY / h) * 100 : 0;
+  bar.style.width = p + "%";
+}
+window.addEventListener("scroll", updateBar, { passive: true });
+updateBar();
 </script>
 
 </body>

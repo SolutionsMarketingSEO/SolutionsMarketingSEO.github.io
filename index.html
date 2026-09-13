@@ -71,6 +71,22 @@
   }
   header h1 { font-size: 1.3rem; letter-spacing: 2px; }
   header h1 span { color: var(--gold-light); }
+
+  /* ===== LOGO ===== */
+  header h1.logo-block { line-height: 0; }
+  header h1.logo-block a { display: inline-block; text-decoration: none; }
+  header h1.logo-block img {
+    height: 54px; width: auto; max-width: 240px;
+    display: block; border-radius: 3px;
+    transition: height 0.3s ease;
+  }
+  header.condensed h1.logo-block img { height: 40px; }
+  @media (max-width: 600px) {
+    header h1.logo-block img { height: 42px; max-width: 190px; }
+    header.condensed h1.logo-block img { height: 34px; }
+  }
+  /* ===== END LOGO ===== */
+
   header nav a, header nav button {
     color: var(--gold-light); text-decoration: none;
     margin-left: 14px; font-size: 0.95rem;
@@ -230,7 +246,7 @@
 
 <header id="site-header">
   <div class="wrap">
-    <h1>SOLUTIONS <span>MARKETING</span> VIP</h1>
+    <h1 class="logo-block"><a href="index.html"><img src="logo.png" alt="Solutions Marketing VIP"></a></h1>
     <nav>
       <a href="blog-list.html">Blog</a>
       <button id="btn-en" class="lang-active" onclick="setLang('en')">EN</button>
